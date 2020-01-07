@@ -1,30 +1,45 @@
-# vue-wzj-marquee
+# wzj-marquee 文字跑马灯
 
-> A Vue.js project
+用户文字左右滚动展示组件。
 
-## Build Setup
+## 基本用法
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```html
+<wzj-marquee> </wzj-marquee>
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 设置滚动内容和速度
+
+```html
+<wzj-marquee :content="跑马灯内容" :speed="30"> </wzj-marquee>
+```
+
+## click 事件
+
+```html
+<wzj-marquee @click="onClick"> </wzj-marquee>
+```
+
+```javascript
+export default {
+  methods: {
+    onClick() {
+      console.log('触发点击事件');
+    }
+  }
+};
+```
+
+## Prop
+
+| 字段    | 说明                         | 类型   | 默认值 |
+| -------- | ---------------------------- | ------ | ------ |
+| content | 设置滚动文字             | String |    |
+| speed | 设置速度 | Number | 50    |
+| animate   | 设置是否运行滚动           | Boolean | true     |
+
+## Event
+
+| 字段  | 说明           | 回调参数 |
+| ----- | -------------- | -------- |
+| click | 按钮点击时触发 | -        |

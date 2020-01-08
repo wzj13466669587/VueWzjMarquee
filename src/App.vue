@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import WzjMarquee from './components/WzjMarquee'
 
 export default {
   name: 'App',
@@ -15,7 +14,7 @@ export default {
     };
   },
   components: {
-    WzjMarquee
+    
   }
 }
 </script>
